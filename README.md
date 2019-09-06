@@ -4,6 +4,7 @@ Tutorial to get CoFIRES up to speed on Git & Github.
 
 Links
 - [Git manual](https://git-scm.com/book/en/v1/Git-Basics-Getting-a-Git-Repository)
+- [Tutorials from Github](https://lab.github.com/)
 - Water programming blog posts: [here](https://waterprogramming.wordpress.com/2014/09/29/getting-started-git-and-github/), [here](https://waterprogramming.wordpress.com/2012/10/29/intro-to-git-part-1-local-version-control/), [here](https://waterprogramming.wordpress.com/2012/10/29/intro-to-git-part-2-remote-repositories/).
 
 ## Useful commands
