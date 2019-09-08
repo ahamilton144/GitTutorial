@@ -31,3 +31,16 @@ Command | Meaning
 `git pull` | pull updated version of remote branch into local branch
 `git merge *other_branch*` | if *current_branch* is checked out, merge commits from *other_branch* into *current_branch*
 `git merge --abort` | abort a failed merge
+
+## Tutorial steps
+### Config for github
+1. `git config --global user.name "John Doe"`
+
+1. `git config --global user.email johndoe@example.com`
+
+### Create repo for existing project
+1. Navigate to project directory in cygwin or git bash. If unfamiliar with linux commands see "15 - Directory Navigation" and "5 - File and Directory Commands" sections [here](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/).
+
+1. `git init`
+
+1. Add .gitignore file. See example in this repo.
