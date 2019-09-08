@@ -39,8 +39,7 @@ Command | Meaning
 1. `git config --global user.email johndoe@example.com`
 
 ### Create repo for existing project
-1. Navigate to project directory in cygwin or git bash. If unfamiliar with linux commands see "15 - Directory Navigation" and "5 - File and Directory Commands" sections [here](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/).
+This is when you've been working on a project on your local computer and you want to make a repository on Github for it. Follow instructions [here](https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line)
 
-1. `git init`
-
-1. Add .gitignore file. See example in this repo.
+### Clone a repo on github to your local computer
+This is when there is an online repo (either one of yours, or someone else's repo you plan to contribute to) that you want to download onto your own computer. Follow instructions [here](https://help.github.com/en/articles/cloning-a-repository).
