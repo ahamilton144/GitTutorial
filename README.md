@@ -44,11 +44,13 @@ This is when you've been working on a project on your local computer and you wan
 This is when there is an online repo (either one of yours, or someone else's repo you plan to contribute to) that you want to download onto your own computer. Follow instructions [here](https://help.github.com/en/articles/cloning-a-repository).
 
 ## Branches, file structure, and project development in Git
-Generally it is best practice (especially when co-developing with a team) not to make changes directly to the Master branch. Rather, each team member who is working on a different set of changes should create their own working branch. Once a set of changes is finalized, the changes are merged into the master branch. Git streamlines the merge process so that different team members don't have to manually add changes made by others into their own changes, which can lead to major headaches.
-
 [Here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) and [here](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository) together are a great description of how Git stores the files in your project and handles changes between branches and commits. While some version control systems track *changes* to your files, Git operates with *snapshots*. You can think of the version control system as a tree, with different branches branching off of the master branch. When the working branch is merged back into the master, the tree branches merge back together. Each time you *commit* a set of changes to whatever branch you are on, Git stores a new snapshot of the project. For files that are unchanged since the last commit, Git just stores a pointer to the last update of that file. For files that are new or changed, the commit will store the new updated version of the file. This means that Git generally only "adds" to the project, rather than deleting files & changes, which means that in general there is a way to go back and retrieve an earlier version of a file if you mess something up.
 
+One common source of confusion occurs when new Git users attempt to find the different project branches in their file system. In your Windows File Explorer (or Mac or Linux equivalent), you won't find separate folders for each branch. Rather, you will just find a single project directory, and the files in that directory will correspond to the versions in the branch that is currently *checked out*. For example, if the master branch is checked out, then only the files that are part of the master branch will show up in the folder, and if you open a file in Notepad or PyCharm, it will show you the version from the master branch. If you then check out a different branch, all files will magically change to reflect the new branch.
+
 ## Local branches and changes
+Generally it is best practice (especially when co-developing with a team) not to make changes directly to the master branch. Rather, each team member who is working on a different set of changes should create their own working branch. Once a set of changes is finalized, the changes are merged into the master branch. Git streamlines the merge process so that different team members don't have to manually add changes made by others into their own changes, which can lead to major headaches.
+
 First, create a local working branch (e.g. *andrew_working*) and *checkout* the branch.
 
 `git checkout -b`*`andrew_working`*
@@ -76,8 +78,8 @@ If I have previously pushed *andrew_working* to the remote repo, so that there i
 
 `git push`
 
-## Pull requests and merging changes into the Master branch
-Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial). If you click where it says "2 branches" (or more if there are multiple working branches in your project), you will see your working branch. Click "New pull request", which will activate a request for the Master branch to *pull* your changes, so that they become part of the Master branch. Remember that this pull request includes one or more commits from your local branch - everything that you have changed since you first branched off the the Master branch. Now give the pull request a name (the default is the last commit message on your working branch), leave a comment if you want to tell your collaborators (or your future self) what was in this pull request, and click "Create pull request".
+## Pull requests and merging changes into the master branch
+Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial). If you click where it says "2 branches" (or more if there are multiple working branches in your project), you will see your working branch. Click "New pull request", which will activate a request for the master branch to *pull* your changes, so that they become part of the master branch. Remember that this pull request includes one or more commits from your local branch - everything that you have changed since you first branched off the the master branch. Now give the pull request a name (the default is the last commit message on your working branch), leave a comment if you want to tell your collaborators (or your future self) what was in this pull request, and click "Create pull request".
 
 If you are not an administrator to the repository (e.g. you are suggesting a change to an open source project), then this is all you can do. It is now up to the administrator to accept or deny your pull request. But if you are an administrator, the next step is the *merge*. If you are the only person that has made changes on the master branch, so that the current master branch is identical to the branch from which you created your working branch, then it will tell you that there are no merge conflicts. You can hit "Merge pull request" and then "Confirm merge" to safely and automatically add your changes on top of the master branch. 
 
@@ -91,12 +93,12 @@ code from master
 >>>>>>> master
 ```
 
-For each merge conflict (there may be multiple conflicting sections in any given file), the conflicting code from the working branch is shown in the first section and the code from the master branch is shown in the second section. To resolve the merge conflict, you should manually remove everything except the correct block of code that should be included in the new, merged version of the Master branch. This merged block can be the code from the working branch, the code from the Master branch, or some combination of the two. Once you have done this for all conflicts within a file, you can click "Mark as resolved," and once you have resolved the conflicts from each file, you can click "Commit merge".  
+For each merge conflict (there may be multiple conflicting sections in any given file), the conflicting code from the working branch is shown in the first section and the code from the master branch is shown in the second section. To resolve the merge conflict, you should manually remove everything except the correct block of code that should be included in the new, merged version of the master branch. This merged block can be the code from the working branch, the code from the master branch, or some combination of the two. Once you have done this for all conflicts within a file, you can click "Mark as resolved," and once you have resolved the conflicts from each file, you can click "Commit merge".  
 
-Once the conflicts have been resolved, you can "Merge pull request" to create a new commit that includes the newest conflict-free changes. Then you "Confirm merge" to add these changes into the Master branch.
+Once the conflicts have been resolved, you can "Merge pull request" to create a new commit that includes the newest conflict-free changes. Then you "Confirm merge" to add these changes into the master branch.
 
 ## Updating your local repository
-Once the pull request and merge has been completed, you can safely delete the working branch from the online repository. Next, we want to update your local repository to reflect the newest version of the Master branch. Back in Git Bash or Cygwin, we can run
+Once the pull request and merge has been completed, you can safely delete the working branch from the online repository. Next, we want to update your local repository to reflect the newest version of the master branch. Back in Git Bash or Cygwin, we can run
 
 `git checkout master`
 
@@ -111,3 +113,27 @@ Assuming your working tree does not contain any changes since your last commit o
 Lastly, we want to create and checkout a new working branch so that we can begin making our next set of changes. Thus we circle back to the **Local branches and changes** section and begin again, starting with 
 
 `git checkout -b`*`andrew_working`*
+
+## Comparing different branches using Meld
+Because Git does not actually store each different branch in its own directory, it can be difficult to compare the differences between files. The simplest way to do a quick comparison is with the *diff* tool
+
+`git diff andrew_working:main.py master:main.py > changes.diff`
+
+This will compare the versions of the *main.py* file in the working and master branches, and write the output to the file *changes.diff*. If you open this in a program like Notepad++, then lines which are exclusive to *andrew_working* will be preceded by (-) signs, and lines exclusive to *master* will be preceded by (+) signs.
+
+This works well for relatively minor changes, but can be difficult to read for more complex changes. I recommend the program [Meld](https://meldmerge.org/) which can show you convenient side-by-side comparisons with difference highlighting. However, it can be a bit tricky to integrate with Git on Windows. With my Cygwin-installed Git, I had to add the following lines to my .gitconfig file, which was located in my Cygwin home directory. If you installed Git using a different method, your .gitconfig file will be located somewhere else, and the path variables below should be adjusted accordingly.
+
+```
+[merge]
+              tool = meld
+[diff]
+              tool = meld
+[mergetool "meld"]
+              path = "/cygdrive/c/Program Files (x86)/Meld/Meld.exe"
+[difftool "meld"]
+              path = "/cygdrive/c/Program Files (x86)/Meld/Meld.exe"
+[difftool]
+              prompt = true
+```
+
+Lastly, if you have Cygwin's Git, you will probably have to follow Carl's comment at the bottom of [this page](https://helmiagustian.wordpress.com/2014/03/17/install-meld-at-cygwin-as-mergetool/) 
