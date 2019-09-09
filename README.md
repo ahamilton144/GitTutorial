@@ -69,4 +69,4 @@ If I have previously pushed *andrew_working* to the remote repo, so that there i
 
 `git push`
 
-Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial).
+Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial). You
