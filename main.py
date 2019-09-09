@@ -13,5 +13,5 @@ plt.xlabel('Date')
 plt.ylabel('Percentage points')
 plt.legend(df.columns)
 plt.show()
-plt.savefig('results/yieldcurve.png')
+plt.savefig('results/yieldcurve_GDP.png')
 
