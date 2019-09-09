@@ -91,7 +91,7 @@ code from master
 >>>>>>> master
 ```
 
-For each merge conflict (there may be multiple conflicting sections in any given file), the conflicting code from the working branch is shown in the first section and the code from the master branch is shown in the second section. To resolve the merge conflict, you should manually remove everything except the correct block of code that should be included in the new, merged version of the Master branch. Once you have done this for all conflicts within a file, you can click "Mark as resolved," and once you have resolved the conflicts from each file, you can click "Commit merge".  
+For each merge conflict (there may be multiple conflicting sections in any given file), the conflicting code from the working branch is shown in the first section and the code from the master branch is shown in the second section. To resolve the merge conflict, you should manually remove everything except the correct block of code that should be included in the new, merged version of the Master branch. This merged block can be the code from the working branch, the code from the Master branch, or some combination of the two. Once you have done this for all conflicts within a file, you can click "Mark as resolved," and once you have resolved the conflicts from each file, you can click "Commit merge".  
 
 Once the conflicts have been resolved, you can "Merge pull request" to create a new commit that includes the newest conflict-free changes. Then you "Confirm merge" to add these changes into the Master branch.
 
