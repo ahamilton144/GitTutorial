@@ -69,4 +69,10 @@ If I have previously pushed *andrew_working* to the remote repo, so that there i
 
 `git push`
 
-Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial). You
+Now we want to merge our working directory into the master branch. To do this, log into the browser version of [Github](https://github.com/) and navigate to the repository that you are working on (in this case, GitTutorial). If you click where it says "2 branches" (or more if there are multiple working branches in your project), you will see your working branch. Click "New pull request", which will activate a request for the Master branch to *pull* your changes, so that they become part of the Master branch. Remember that this pull request includes one or more commits from your local branch - everything that you have changed since you first branched off the the Master branch. Now give the pull request a name (the default is the last commit message on your working branch), leave a comment if you want to tell your collaborators (or your future self) what was in this pull request, and click "Create pull request".
+
+If you are not an administrator to the repository (e.g. you are suggesting a change to an open source project), then this is all you can do. It is now up to the administrator to accept or deny your pull request. But if you are an administrator, the next step is the *merge*. If you are the only person that has made changes on the master branch, so that the current master branch is identical to the branch from which you created your working branch, then it will tell you that there are no merge conflicts, and you can "Merge pull request" to safely and automatically add your changes on top of the master branch. You then "Confirm merge", and it will tell you that it is safe to delete the working branch from the online repo.
+
+However, if multiple people are co-developing, it will sometimes be the case that there are merge conflicts. This occurs when someone else has pushed changes to the master branch in between the time when you first created your branch and the current moment. If that person made changes to a file which you have also made changes to, then Git will ask you to manually merge the files.
+
+
