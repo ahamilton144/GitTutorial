@@ -2,7 +2,7 @@
 
 Tutorial to get CoFIRES up to speed on Git & Github.
 
-Links
+## Other useful links
 - [Super basic intro](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 - [Git manual](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)
 - [Tutorials from Github](https://lab.github.com/)
