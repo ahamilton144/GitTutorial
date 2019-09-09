@@ -136,4 +136,10 @@ This works well for relatively minor changes, but can be difficult to read for m
               prompt = true
 ```
 
-Lastly, if you have Cygwin's Git, you will probably have to follow Carl's comment at the bottom of [this page](https://helmiagustian.wordpress.com/2014/03/17/install-meld-at-cygwin-as-mergetool/) 
+Lastly, if you have Cygwin's Git, you will probably have to follow Carl's comment at the bottom of [this page](https://helmiagustian.wordpress.com/2014/03/17/install-meld-at-cygwin-as-mergetool/). 
+
+Once you have followed these steps, you can compare the differences between the current checked out branch (say, *andrew_working*) and another branch (say, *master*) by typing 
+
+`git difftool master`
+
+Git will find all files which are different between the two branches, and ask you one-by-one whether you want to open that file for comparison in Meld.
