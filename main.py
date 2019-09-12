@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy
 
 df = pd.read_csv('data/cleveland_fed_yieldcurve.csv', sep='\t')
 df.columns = ['Date','GDP_Growth','Spread_10Y_3M']
