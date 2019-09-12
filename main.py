@@ -12,5 +12,5 @@ plt.xlabel('Date')
 plt.ylabel('Percentage points')
 plt.legend(['GDP Growth', '10Y-3M Spread'])
 plt.show()
-plt.savefig('results/yieldcurve_GDP.png')
+plt.savefig('results/yieldcurve_GDP_BENISAWESOME.png')
 
