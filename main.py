@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # SUCKAAAAAAAAAAAAAAAAAAAAAA
+# ATOM!!!!
 
 df = pd.read_csv('data/cleveland_fed_yieldcurve.csv', sep='\t')
 df.columns = ['Date','GDP_Growth','Spread_10Y_3M']
@@ -16,5 +17,3 @@ plt.legend(['GDP Growth', '10Y-3M Spread'])
 plt.show()
 
 plt.savefig('results/yieldcurve_GDP_david_is_da_bomb.png')
-
-
