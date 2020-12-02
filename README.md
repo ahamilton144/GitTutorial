@@ -14,7 +14,7 @@ Command | Meaning
 `git checkout *branch_name*` | switch to existing branch 
 `git checkout -b *branch_name*` | create new branch and check out
 `git branch` | list all local branches. current branch has asterisk.
-`git brach -d *branch_name*` | delete local branch. Use -D flag to force delete of unsaved changes.
+`git branch -d *branch_name*` | delete local branch. Use -D flag to force delete of unsaved changes.
 `git status` | show current state of working tree, which has all changes relative to last commit. Changes in green have already been added to stage, but still awaiting commit. Changes in red have not been staged yet.
 `git add *file_name*` | add changes in *file_name* to stage
 `git add .` | add all uncommitted changes in current directory (recursive) to stage
